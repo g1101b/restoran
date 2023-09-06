@@ -1,12 +1,14 @@
 import React from 'react';
 
 import {Header} from './components'
+import {Home} from './pages'
 
 const App: React.FC = () => {
 	return (
 		<>
 		<Header />
 			<main className="home">
+				<Home />
 			</main>
 			<footer className="footer">
 				<div className="footer__icon">
