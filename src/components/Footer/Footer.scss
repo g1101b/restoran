@@ -1,0 +1,22 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 40px;
+
+    background-color: var(--color-green);
+    color: var(--color-white);
+
+    &__icon {
+        width: 200px;
+        height: auto;
+        border-radius: 15px;
+    }
+
+    &__contact h3 {
+        margin-bottom: 10px;
+    }
+    &__socials h3 {
+        margin-bottom: 10px;
+    }
+}

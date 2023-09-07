@@ -5,9 +5,7 @@ import './Footer.scss';
 export const Footer: React.FC = () => {
   return (
 			<footer className="footer">
-				<div className="footer__icon">
-					<img src="" alt="" />
-				</div>
+				<img className="footer__icon" src={require('../../assets/restaurant.jpg')} alt="" />
 				<div className="footer__nav">
 					<ul>
 						<li className="footer__nav-link">Home</li>
@@ -19,6 +17,7 @@ export const Footer: React.FC = () => {
 					</ul>
 				</div>
 				<div className="footer__contact">
+					<h3>Contact</h3>
 					<ul>
 						<li>Address</li>
 						<li>Phone number</li>
@@ -26,6 +25,7 @@ export const Footer: React.FC = () => {
 					</ul>
 				</div>
 				<div className="footer__socials">
+					<h3>Social Media Links</h3>
 					<ul>
 						<li>Address</li>
 						<li>Phone number</li>
