@@ -1,0 +1,18 @@
+@import "../../styles/vars";
+
+.header {
+    padding: 20px;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+}
