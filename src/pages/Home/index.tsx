@@ -19,45 +19,55 @@ export const Home: React.FC = () => {
             </section>
             <section className="main__highlights">
                 <div className="container">
-                    <div className="main__header">
+                    <div className="main__highlights-header">
                         <h3>Spesials</h3>
                         <a href="" className="main__menu">Online Menu</a>
                     </div>
                     <div className="main__spesials">
                         <div className="main__card">
-                            <img src="" alt="" className="main__card-img" />
+                            <img src={require('../../assets/greek salad.jpg')} alt="" className="main__card-img" />
                             <div className="main__card-header">
-                                <span>title</span>
-                                <span>price</span>
+                                <span className='main__card-header-title'>title</span>
+                                <span className='main__card-header-price'>price</span>
                             </div>
-                            <p className="main__card-descriptions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi totam est repellendus dolores nam reprehenderit perferendis nemo, dolor sunt laborum?</p>
-                            <a href="" className="main__card-order-btn"></a>
+                            <p className="main__card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi totam est repellendus dolores nam reprehenderit perferendis nemo, dolor sunt laborum?</p>
+                            <a href="" className="main__card-order-btn">Order a delivery</a>
+                        </div>
+
+                        <div className="main__card">
+                            <img src={require('../../assets/lemon dessert.jpg')} alt="" className="main__card-img" />
+                            <div className="main__card-header">
+                                <span className='main__card-title'>title</span>
+                                <span className='main__card-price'>price</span>
+                            </div>
+                            <p className="main__card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi totam est repellendus dolores nam reprehenderit perferendis nemo, dolor sunt laborum?</p>
+                            <a href="" className="main__card-order-btn">Order a delivery</a>
+                        </div>
+
+                        <div className="main__card">
+                            <img src={require('../../assets/restauranfood.jpg')} alt="" className="main__card-img" style={{objectFit:'cover'}}/>
+                            <div className="main__card-header">
+                                <span className='main__card-title'>title</span>
+                                <span className='main__card-price'>price</span>
+                            </div>
+                            <p className="main__card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi totam est repellendus dolores nam reprehenderit perferendis nemo, dolor sunt laborum?</p>
+                            <a href="" className="main__card-order-btn">Order a delivery</a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section className="main__testimonials">
-            <div className="container">
-                <h3>Testimonials</h3>
-                <div className="testimonials__list">
-                    <div className="testimonials__item">
-                        <h5>header</h5>
-                        <img src="" alt="" />
-                        <span>name</span>
-                        <p>text</p>
+            <section className='main__hero about'>
+                <div className="container hero-block">
+                    <div className='main__hero-content' style={{color: 'black'}}>
+                        <h1>Little Lemon</h1>
+                        <h3>Chicago</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus explicabo omnis perspiciatis, soluta corporis id voluptatum nihil rem at delectus!</p>
+                        <a href="" className="main__order-table">Reserve a Table</a>
                     </div>
-                </div>
-            </div>
-            </section>
-            <section className='main__about'>
-                <div className="container">
-                    <h1>Little Lemon</h1>
-                    <h6>Chicago</h6>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et fugit tempora dolores amet nobis placeat commodi odio expedita magni debitis!</p>
-                    <img src="" alt="" />
+                    <img src={require('../../assets/restauranfood.jpg')} alt="" className="main__hero-img" />
                 </div>
             </section>
 
-            </div>
+        </div>
     )
 }
