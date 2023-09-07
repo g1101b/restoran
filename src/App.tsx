@@ -3,6 +3,8 @@ import React from 'react';
 import {Header, Footer} from './components'
 import {Home} from './pages'
 
+import './styles/index.scss'
+
 const App: React.FC = () => {
 	return (
 		<>
