@@ -2,36 +2,42 @@ import React from 'react'
 
 import './Home.scss';
 
-export const Home = () => {
+export const Home: React.FC = () => {
     return (
         <div className='main'>
+
             <section className="main__hero">
-                <div>
-                    <h1>Little Lemon</h1>
-                    <h6>Chicago</h6>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus explicabo omnis perspiciatis, soluta corporis id voluptatum nihil rem at delectus!</p>
-                    <a href="" className="main__order-table"></a>
+                <div className="container hero-block">
+                    <div className='main__hero-content'>
+                        <h1>Little Lemon</h1>
+                        <h3>Chicago</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus explicabo omnis perspiciatis, soluta corporis id voluptatum nihil rem at delectus!</p>
+                        <a href="" className="main__order-table">Reserve a Table</a>
+                    </div>
+                    <img src={require('../../assets/restauranfood.jpg')} alt="" className="main__hero-img" />
                 </div>
-                <img src="" alt="" className="main__img" />
             </section>
             <section className="main__highlights">
-                <div className="main__header">
-                    <h3>Spesials</h3>
-                    <a href="" className="main__menu"></a>
-                </div>
-                <div className="main__spesials">
-                    <div className="main__card">
-                        <img src="" alt="" className="main__card-img" />
-                        <div className="main__card-header">
-                            <span>title</span>
-                            <span>price</span>
+                <div className="container">
+                    <div className="main__header">
+                        <h3>Spesials</h3>
+                        <a href="" className="main__menu">Online Menu</a>
+                    </div>
+                    <div className="main__spesials">
+                        <div className="main__card">
+                            <img src="" alt="" className="main__card-img" />
+                            <div className="main__card-header">
+                                <span>title</span>
+                                <span>price</span>
+                            </div>
+                            <p className="main__card-descriptions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi totam est repellendus dolores nam reprehenderit perferendis nemo, dolor sunt laborum?</p>
+                            <a href="" className="main__card-order-btn"></a>
                         </div>
-                        <p className="main__card-descriptions">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi totam est repellendus dolores nam reprehenderit perferendis nemo, dolor sunt laborum?</p>
-                        <a href="" className="main__card-order-btn"></a>
                     </div>
                 </div>
             </section>
-            <section className="testimonials">
+            <section className="main__testimonials">
+            <div className="container">
                 <h3>Testimonials</h3>
                 <div className="testimonials__list">
                     <div className="testimonials__item">
@@ -41,13 +47,17 @@ export const Home = () => {
                         <p>text</p>
                     </div>
                 </div>
+            </div>
             </section>
-            <section className='about'>
-                <h1>Little Lemon</h1>
-                <h6>Chicago</h6>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et fugit tempora dolores amet nobis placeat commodi odio expedita magni debitis!</p>
-                <img src="" alt="" />
+            <section className='main__about'>
+                <div className="container">
+                    <h1>Little Lemon</h1>
+                    <h6>Chicago</h6>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et fugit tempora dolores amet nobis placeat commodi odio expedita magni debitis!</p>
+                    <img src="" alt="" />
+                </div>
             </section>
-        </div>
+
+            </div>
     )
 }
