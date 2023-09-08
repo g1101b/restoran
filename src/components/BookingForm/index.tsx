@@ -8,11 +8,10 @@ import './BookingForm.scss'
 import { BookingProps } from '../../pages/Booking/booking'
 
 export const BookingForm: React.FC<BookingProps> = ({times, changeTimes}) => {
-	const date = new Date();
 
 	const initialValues = {
-		date: `${date?.getFullYear()}-${date?.getMonth()}-${date?.getDate()}`,
-		time: '17:00',
+		date: '', 
+		time: '',
 		guestsAmount: 1,
 		occasion: 'Birthday',
 	}
