@@ -7,11 +7,11 @@ import './BookingForm.scss'
 
 import { BookingProps } from './booking'
 
-export const BookingForm: React.FC<BookingProps> = ({availableTimes, dispatchOnDateChange}) => {
+export const BookingForm: React.FC<BookingProps> = ({availableTimes, dispatchOnDateChange, submitData}) => {
 
 	const initialValues = {
 		date: '', 
-		time: '',
+		time: availableTimes[0],
 		guestsAmount: 1,
 		occasion: 'Birthday',
 	}
@@ -25,9 +25,8 @@ export const BookingForm: React.FC<BookingProps> = ({availableTimes, dispatchOnD
 		})
 	}
 
-	const submit = (values: object, actions: any) => {
-		console.log(values)
-		actions.resetForm();
+	const submit = (values: object) => {
+		submitData(values)
 	}
 
 	const formik = useFormik({
@@ -64,7 +63,7 @@ export const BookingForm: React.FC<BookingProps> = ({availableTimes, dispatchOnD
 					}
 				</select>
 				{formik.touched.time && formik.errors.time ? (
-					<div>{formik.errors.time}</div>
+					<div>{formik.errors.time as React.ReactNode}</div>
 				) : null}
 			</div>
 
