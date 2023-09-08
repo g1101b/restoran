@@ -5,9 +5,9 @@ import * as yup from 'yup'
 
 import './BookingForm.scss'
 
-import { BookingProps } from '../../pages/Booking/booking'
+import { BookingProps } from './booking'
 
-export const BookingForm: React.FC<BookingProps> = ({times, changeTimes}) => {
+export const BookingForm: React.FC<BookingProps> = ({availableTimes, dispatchOnDateChange}) => {
 
 	const initialValues = {
 		date: '', 
@@ -58,7 +58,7 @@ export const BookingForm: React.FC<BookingProps> = ({times, changeTimes}) => {
 					{...formik.getFieldProps('time')} 
 				>
 					{
-						times && times.map((item, idx) => (
+						availableTimes && availableTimes.map((item, idx) => (
 							<option key={`${item} ${idx}`}>{item}</option>
 						))
 					}
