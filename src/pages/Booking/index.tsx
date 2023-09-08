@@ -5,8 +5,10 @@ import './Booking.scss'
 
 export const Booking: React.FC = () => {
 	return (
-		<div className="booking-form">
-			<BookingForm />
+		<div className="booking">
+			<div className="container">
+				<BookingForm />
+			</div>
 		</div>
 	)
 }
