@@ -5,7 +5,9 @@ import * as yup from 'yup'
 
 import './BookingForm.scss'
 
-export const BookingForm: React.FC = () => {
+import { BookingProps } from '../../pages/Booking/booking'
+
+export const BookingForm: React.FC<BookingProps> = ({times, changeTimes}) => {
 	const date = new Date();
 
 	const initialValues = {
@@ -43,10 +45,7 @@ export const BookingForm: React.FC = () => {
 				<input 
 					type="date" 
 					id="date" 
-					name='date' 
-					onChange={formik.handleChange}
-         			onBlur={formik.handleBlur}
-         			value={formik.values.date}
+					{...formik.getFieldProps('date')} 
 				/>
 				{formik.touched.date && formik.errors.date ? (
 					<div>{formik.errors.date}</div>
@@ -57,17 +56,13 @@ export const BookingForm: React.FC = () => {
 				<label htmlFor="time">Choose time</label>
 				<select 
 					id="time" 
-					name='time' 
-					onChange={formik.handleChange}
-         			onBlur={formik.handleBlur}
-         			value={formik.values.time}
+					{...formik.getFieldProps('time')} 
 				>
-					<option selected>17:00</option>
-					<option>18:00</option>
-					<option>19:00</option>
-					<option>20:00</option>
-					<option>21:00</option>
-					<option>22:00</option>
+					{
+						times && times.map((item, idx) => (
+							<option key={`${item} ${idx}`}>{item}</option>
+						))
+					}
 				</select>
 				{formik.touched.time && formik.errors.time ? (
 					<div>{formik.errors.time}</div>
