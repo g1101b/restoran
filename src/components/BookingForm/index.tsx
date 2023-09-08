@@ -38,6 +38,8 @@ export const BookingForm: React.FC<BookingProps> = ({availableTimes, dispatchOnD
 	return (
 		<form className='form' onSubmit={formik.handleSubmit}>
 
+			<h3>Book a table</h3>
+
 			<div className="field">
 				<label htmlFor="date">Choose date</label>
 				<input 
@@ -91,8 +93,9 @@ export const BookingForm: React.FC<BookingProps> = ({availableTimes, dispatchOnD
 				) : null}
 			</div>
 
-			<input type="submit" value="Make Your reservation" />
-
+			<div className="field">
+				<input type="submit" value="Make Your reservation" />
+			</div>
 		</form>
 	)
 }
